@@ -2242,7 +2242,7 @@ int sde_connector_roi_v1_check_roi(struct drm_connector_state *conn_state)
 			return -EINVAL;
 		}
 
-		if (h < align->min_height || h % align->height_pix_align) {
+		if (h < align->min_height) {
 			SDE_ERROR_CONN(c_conn,
 					"invalid conn roi height %d min %d align %d\n",
 					h, align->min_height,
